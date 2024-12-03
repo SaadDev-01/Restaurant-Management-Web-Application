@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">Spice Bites</div>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="javascript:void(0)" class="menu-item" data-target="dashboard">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Admin Dashboard</span>
+                </a>
+                <span class="tooltip">Admin Dashboard</span>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="menu-item" data-target="home">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="menu-item" data-target="contact">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Contact Us</span>
+                </a>
+                <span class="tooltip">Contact Us</span>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="menu-item" data-target="order">
+                    <i class='bx bx-cart-alt'></i>
+                    <span class="links_name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="menu-item" data-target="about-us">
+                    <i class='bx bx-info-circle'></i>
+                    <span class="links_name">About Us</span>
+                </a>
+                <span class="tooltip">About Us</span>
+            </li>
+            <li class="profile">
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section id="home" class="home-section content-section">
+        <div class="video-container">
+            <video autoplay muted loop id="myVideo">
+                <source src="pro-vid.mp4" type="video/mp4">
+            </video>
+            
+            <div class="overlay-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; font-size: 2rem; font-weight: bold; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);">
+                <h1 style="font-size: 4rem; margin-bottom: 15px; font-weight: 700; text-transform: uppercase;">Welcome to Spice Bites!</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 20px;">Delicious food. Perfect moments. Every bite.</p>
+            </div>
+        </div>
+    </section>
+    
+
+        <!-- Contact Us Section -->
+        <div id="contact" class="content-section" style="display: none; font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; background: #f0f4f7; padding: 60px 30px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); max-width: 980px; margin: 60px auto; line-height: 1.7;">
+            <h2 class="section-title" style="font-size: 48px; color: #ff6f61; margin-bottom: 30px; text-align: center; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);">
+                Contact Us
+            </h2>
+            <p style="font-size: 20px; color: #555; text-align: center; margin-bottom: 30px; font-weight: 300; line-height: 1.7;">
+                We'd Love to Hear From You!
+            </p>
+            <p style="font-size: 20px; color: #555; text-align: center; margin-bottom: 30px; font-weight: 300; line-height: 1.7;">
+                For inquiries, call: <strong>(123) 456-7890</strong>
+            </p>
+            
+            <h3 style="font-size: 36px; color: #ff6f61; margin-bottom: 18px; font-weight: 600; text-transform: capitalize; border-bottom: 3px solid #ff6f61; padding-bottom: 5px; letter-spacing: 0.5px;">
+                Our Location
+            </h3>
+            <p style="font-size: 18px; color: #555; margin-bottom: 40px;">
+                <strong>Spice Bites</strong><br>
+                123 Main Street<br>
+                City, State, 12345
+            </p>
+        
+            <h3 style="font-size: 36px; color: #ff6f61; margin-bottom: 18px; font-weight: 600; text-transform: capitalize; border-bottom: 3px solid #ff6f61; padding-bottom: 5px; letter-spacing: 0.5px;">
+                Phone
+            </h3>
+            <p style="font-size: 18px; color: #555; margin-bottom: 40px;">
+                For reservations, inquiries, or to speak with our team, call us at: <strong>(123) 456-7890</strong>
+            </p>
+            
+            <h3 style="font-size: 36px; color: #ff6f61; margin-bottom: 18px; font-weight: 600; text-transform: capitalize; border-bottom: 3px solid #ff6f61; padding-bottom: 5px; letter-spacing: 0.5px;">
+                Email
+            </h3>
+            <p style="font-size: 18px; color: #555; margin-bottom: 40px;">
+                Have a specific question or request? Email us at: <strong>info@spicebites.com</strong>
+            </p>
+        
+            <h3 style="font-size: 36px; color: #ff6f61; margin-bottom: 18px; font-weight: 600; text-transform: capitalize; border-bottom: 3px solid #ff6f61; padding-bottom: 5px; letter-spacing: 0.5px;">
+                Opening Hours
+            </h3>
+            <ul style="font-size: 18px; color: #555; margin-bottom: 40px; list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 10px;">Monday to Friday: 9:00 AM - 9:00 PM</li>
+                <li style="margin-bottom: 10px;">Saturday & Sunday: 10:00 AM - 10:00 PM</li>
+            </ul>
+        
+            <h3 style="font-size: 36px; color: #ff6f61; margin-bottom: 18px; font-weight: 600; text-transform: capitalize; border-bottom: 3px solid #ff6f61; padding-bottom: 5px; letter-spacing: 0.5px;">
+                Follow Us
+            </h3>
+            <ul class="social-media" style="font-size: 18px; color: #555; margin-bottom: 40px; list-style-type: none; padding-left: 0; text-align: center;">
+                <li style="display: inline-block; margin: 0 15px;">
+                    <a href="https://www.facebook.com" target="_blank" style="display: block; width: 60px; height: 60px; background-color: #3b5998; border-radius: 50%; text-align: center; line-height: 60px; color: #fff; font-size: 28px; text-decoration: none; transition: transform 0.3s, background-color 0.3s;">
+                        <i class="fab fa-facebook-f" style="font-size: 32px; vertical-align: middle;"></i>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin: 0 15px;">
+                    <a href="https://www.instagram.com" target="_blank" style="display: block; width: 60px; height: 60px; background-color: #E4405F; border-radius: 50%; text-align: center; line-height: 60px; color: #fff; font-size: 28px; text-decoration: none; transition: transform 0.3s, background-color 0.3s;">
+                        <i class="fab fa-instagram" style="font-size: 32px; vertical-align: middle;"></i>
+                    </a>
+                </li>
+                <li style="display: inline-block; margin: 0 15px;">
+                    <a href="https://www.twitter.com" target="_blank" style="display: block; width: 60px; height: 60px; background-color: #1DA1F2; border-radius: 50%; text-align: center; line-height: 60px; color: #fff; font-size: 28px; text-decoration: none; transition: transform 0.3s, background-color 0.3s;">
+                        <i class="fab fa-twitter" style="font-size: 32px; vertical-align: middle;"></i>
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+        
+
+        <!-- Order Section -->
+        <div id="order" class="content-section" style="padding: 30px; font-family: 'Arial', sans-serif; margin-left: 140px; z-index: 1;">
+            <h2 class="section-title" style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px; color: #2d2d2d;">Order</h2>
+            <p style="font-size: 1.2rem; color: #555; margin-bottom: 40px;">Place your orders here! Browse our delicious menu and enjoy a great meal. You can add your favorite items to your cart.</p>
+            
+            <!-- Menu Cards Container with Scroll Arrows -->
+            <div style="position: relative;">
+                <button class="scroll-arrow left" id="leftArrow" onclick="scrollMenu('left')" style="position: absolute; top: 50%; left: 0; z-index: 2; background: rgba(0, 0, 0, 0.3); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 50%; font-size: 20px;">&#8592;</button>
+                <div class="menu-slider" id="menuContainer" style="display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 20px; padding-bottom: 10px;">
+                    <!-- Menu items will be dynamically added from PHP -->
+                </div>
+                <button class="scroll-arrow right" id="rightArrow" onclick="scrollMenu('right')" style="position: absolute; top: 50%; right: 0; z-index: 2; background: rgba(0, 0, 0, 0.3); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 50%; font-size: 20px;">&#8594;</button>
+            </div>
+        
+            <!-- Cart Summary Section -->
+            <form id="orderForm" method="POST" action="save_order.php" style="margin-top: 40px; padding: 20px; background-color: #f7f7f7; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 1.8rem; font-weight: bold; color: #333;">Your Cart</h3>
+                
+                <!-- Customer Name Input -->
+                <label for="customerName" style="font-size: 1.2rem; color: #555; display: block; margin-bottom: 10px;">Customer Name:</label>
+                <input type="text" id="customerName" name="customerName" placeholder="Enter your name" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;" oninput="saveCustomerName()">
+                
+                <!-- Cart Items -->
+                <div id="cartItems" style="margin-top: 20px;"></div>
+                
+                <!-- Cart Total -->
+                <div id="cartTotal" style="font-size: 1.5rem; font-weight: bold; color: #333; margin-top: 15px;">Total: $0.00</div>
+            
+                <div id="hiddenCartInputs"></div>
+            
+                <button type="submit" style="background: #FF5733; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; width: 100%;">Place Order</button>
+            </form>
+        </div>
+        
+        <script>
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let customerName = localStorage.getItem('customerName') || '';
+
+            // Initialize customer name field and cart
+            document.getElementById('customerName').value = customerName;
+            updateCart();
+
+            // Fetch menu items and add them into the page
+            fetch('fetch_menu.php')
+                .then(response => response.text())
+                .then(data => {
+                    const menuContainer = document.getElementById('menuContainer');
+                    menuContainer.innerHTML = data;
+                    adjustScrollArrows();
+                })
+                .catch(error => {
+                    console.error('Error fetching menu data:', error);
+                });
+
+            // Function to scroll the menu container left or right
+            function scrollMenu(direction) {
+                const menuContainer = document.getElementById('menuContainer');
+                if (direction === 'left') {
+                    menuContainer.scrollBy({ left: -200, behavior: 'smooth' });
+                } else {
+                    menuContainer.scrollBy({ left: 200, behavior: 'smooth' });
+                }
+            }
+
+            // Function to adjust visibility of scroll arrows
+            function adjustScrollArrows() {
+                const menuContainer = document.getElementById('menuContainer');
+                const leftArrow = document.getElementById('leftArrow');
+                const rightArrow = document.getElementById('rightArrow');
+                
+                if (menuContainer.scrollWidth > menuContainer.clientWidth) {
+                    leftArrow.style.display = 'block';
+                    rightArrow.style.display = 'block';
+                } else {
+                    leftArrow.style.display = 'none';
+                    rightArrow.style.display = 'none';
+                }
+            }
+
+            // Update the cart display
+            function updateCart() {
+                const cartItemsContainer = document.getElementById('cartItems');
+                const cartTotal = document.getElementById('cartTotal');
+                cartItemsContainer.innerHTML = '';
+                let total = 0;
+
+                cart.forEach((item, index) => {
+                    total += item.price * item.quantity;
+
+                    const itemDiv = document.createElement('div');
+                    itemDiv.style.display = 'flex';
+                    itemDiv.style.justifyContent = 'space-between';
+                    itemDiv.style.marginBottom = '10px';
+                    itemDiv.style.alignItems = 'center';
+
+                    itemDiv.innerHTML = `
+                        <span>${item.name} (x${item.quantity})</span>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                            <button onclick="removeFromCart(${index})" style="background: red; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Remove</button>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(itemDiv);
+                });
+
+                cartTotal.innerText = `Total: $${total.toFixed(2)}`;
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+
+            // Add items to the cart
+            function addToCart(id, name, price) {
+                const quantityInput = document.getElementById(`quantity_${id}`);
+                const quantity = parseInt(quantityInput.value);
+
+                if (quantity < 1) return;
+
+                const existingItem = cart.find(item => item.id === id);
+
+                if (existingItem) {
+                    existingItem.quantity += quantity;
+                } else {
+                    cart.push({ id, name, price, quantity });
+                }
+
+                updateCart();
+            }
+
+            // Remove items from the cart
+            function removeFromCart(index) {
+                cart.splice(index, 1); 
+                updateCart();
+            }
+
+            function saveCustomerName() {
+                customerName = document.getElementById('customerName').value;
+                localStorage.setItem('customerName', customerName);
+            }
+
+            // logic for form submission
+            document.getElementById('orderForm').addEventListener('submit', function (event) {
+                const hiddenCartInputs = document.getElementById('hiddenCartInputs');
+                hiddenCartInputs.innerHTML = '';
+
+                cart.forEach((item, index) => {
+                    const nameInput = document.createElement('input');
+                    nameInput.type = 'hidden';
+                    nameInput.name = `cart[${index}][name]`;
+                    nameInput.value = item.name;
+                    hiddenCartInputs.appendChild(nameInput);
+
+                    const priceInput = document.createElement('input');
+                    priceInput.type = 'hidden';
+                    priceInput.name = `cart[${index}][price]`;
+                    priceInput.value = item.price;
+                    hiddenCartInputs.appendChild(priceInput);
+
+                    const quantityInput = document.createElement('input');
+                    quantityInput.type = 'hidden';
+                    quantityInput.name = `cart[${index}][quantity]`;
+                    quantityInput.value = item.quantity;
+                    hiddenCartInputs.appendChild(quantityInput);
+                });
+
+                // After order is placed, clear localStorage and reset the form
+                setTimeout(() => {
+                    // Clear the cart and customer name from localStorage
+                    localStorage.removeItem('cart');
+                    localStorage.removeItem('customerName');
+
+                    // Reset the cart display and customer name input
+                    cart = [];
+                    document.getElementById('customerName').value = '';
+                    updateCart();
+                }, 500);
+            });
+
+        </script>
+
+        <!-- About Us Section -->
+        <div id="about-us" class="content-section" style="display: none; font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; background: linear-gradient(145deg, #f7f7f7, #ffffff); padding: 60px 40px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); max-width: 960px; margin: 60px auto; line-height: 1.8; text-align: center;">
+    
+            <h2 class="section-title" style="font-size: 48px; color: #ff6f61; margin-bottom: 35px; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);">
+                About Us
+            </h2>
+            <p style="font-size: 20px; text-align: center; margin-bottom: 50px; font-weight: 300; color: #555; line-height: 1.7;">
+                Welcome to Spice Bites, where bold flavors meet unforgettable dining experiences. Established in 2024, we are passionate about delivering exceptional food and service in a warm, inviting atmosphere. Come discover why we're the heart of the community.
+            </p>
+        
+            <h3 style="font-size: 40px; color: #ff6f61; margin-bottom: 25px; font-weight: 600; text-transform: capitalize; border-bottom: 4px solid #ff6f61; padding-bottom: 10px; letter-spacing: 0.5px;">
+                Our Story
+            </h3>
+            <p style="font-size: 18px; margin-bottom: 40px; color: #555; line-height: 1.7;">
+                Spice Bites was born from the vision of Admin, who sought to create a space where both traditional and contemporary flavors could flourish. From humble beginnings to a beloved community gathering spot, we are proud to share our journey with you.
+            </p>
+        
+            <h3 style="font-size: 40px; color: #ff6f61; margin-bottom: 25px; font-weight: 600; text-transform: capitalize; border-bottom: 4px solid #ff6f61; padding-bottom: 10px; letter-spacing: 0.5px;">
+                Our Values
+            </h3>
+            <p style="font-size: 18px; margin-bottom: 40px; color: #555; line-height: 1.7;">
+                We believe in supporting sustainable practices and sourcing only the freshest ingredients. At Spice Bites, we are committed to creating a memorable experience for each guest with warm hospitality, quality food, and a welcoming ambiance.
+            </p>
+        
+            <h3 style="font-size: 40px; color: #ff6f61; margin-bottom: 25px; font-weight: 600; text-transform: capitalize; border-bottom: 4px solid #ff6f61; padding-bottom: 10px; letter-spacing: 0.5px;">
+                Our Space
+            </h3>
+            <p style="font-size: 18px; margin-bottom: 40px; color: #555; line-height: 1.7;">
+                Our modern yet cozy space is designed with comfort in mind. Whether it's a casual meal or a special celebration, we’ve created the perfect atmosphere for you to relax, enjoy, and create lasting memories.
+            </p>
+        
+            <h3 style="font-size: 40px; color: #ff6f61; margin-bottom: 25px; font-weight: 600; text-transform: capitalize; border-bottom: 4px solid #ff6f61; padding-bottom: 10px; letter-spacing: 0.5px;">
+                What Makes Us Unique
+            </h3>
+            <p style="font-size: 18px; margin-bottom: 40px; color: #555; line-height: 1.7;">
+                We’re not just another restaurant. At Spice Bites, we offer unique dining experiences, seasonal specials, and vibrant community events. Whether you're craving a familiar favorite or seeking something adventurous, each dish is crafted to delight.
+            </p>
+        
+            <h3 style="font-size: 40px; color: #ff6f61; margin-bottom: 25px; font-weight: 600; text-transform: capitalize; border-bottom: 4px solid #ff6f61; padding-bottom: 10px; letter-spacing: 0.5px;">
+                Join Us!
+            </h3>
+            <p style="font-size: 20px; color: #333; text-align: center; margin-bottom: 30px; font-weight: 300;">
+                Come visit Spice Bites and indulge in a dining experience like no other. We can’t wait to welcome you!
+            </p>
+            <a href="#contact" style="background-color: #ff6f61; color: white; padding: 12px 30px; text-transform: uppercase; font-size: 18px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: inline-block; margin-top: 20px; transition: background-color 0.3s, transform 0.3s;">
+                Visit Us Now
+            </a>
+        </div>
+
+        <!-- Admin Dashboard Section -->
+        <div id="dashboard" class="content-section" style="display: none; padding: 60px; background: #f0f4f7; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);">
+            <div id="login-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 9999; backdrop-filter: blur(10px);">
+                <div style="background-color: white; padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); text-align: center; position: relative;">
+                    <!-- Cross button -->
+                    <button id="close-btn" style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; font-size: 30px; color: #ff6f61; cursor: pointer;">&times;</button>
+                    <h2 style="color: #ff6f61; margin-bottom: 20px;">Admin Login</h2>
+                    <form method="POST" action="authenticate.php">
+                        <input type="text" name="admin-username" placeholder="Username" required style="padding: 10px; margin-bottom: 15px; width: 100%; border-radius: 5px; border: 1px solid #ddd;">
+                        <input type="password" name="admin-password" placeholder="Password" required style="padding: 10px; margin-bottom: 20px; width: 100%; border-radius: 5px; border: 1px solid #ddd;">
+                        <button type="submit" name="login" style="background-color: #ff6f61; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; width: 100%;">Login</button>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            window.onload = function() {
+                // Check if the admin is logged in
+                if (sessionStorage.getItem('admin_logged_in') === 'true') {
+                    document.getElementById('login-overlay').style.display = 'none';
+                    document.getElementById('dashboard').style.display = 'block'; 
+                } else {
+                    document.getElementById('login-overlay').style.display = 'flex';
+                }
+        
+                // Close button functionality
+                document.getElementById('close-btn').addEventListener('click', function() {
+                    document.getElementById('login-overlay').style.display = 'none';
+                    window.location.href = 'index.html'; 
+                });
+            }
+        </script>
+        
+        
+            
+        </div>
+</body>
+
+</html>
